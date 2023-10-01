@@ -1,6 +1,7 @@
 // 创建一个节点
 class Node {
     constructor(name) {
+        // name = "";
         this.name = name;
         this.fileholder = [];
     }
