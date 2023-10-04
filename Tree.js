@@ -49,3 +49,21 @@ javascript.addChild(new Node('CSS'));
 javascript.addChild(new Node('Pair-coding'));
 
 BST(root);
+
+function DST(node) {
+    let stack = [];
+    stack.push(node);
+
+    while (stack.length > 0) {
+        let currentnode = stack.pop();
+
+        console.log(currentnode.name);
+        
+        for(let i = currentnode.childnode.length - 1; i >= 0; i--) {
+            stack.push(currentnode.childnode[i]);
+        }
+    }
+}
+
+console.log('///////////////////////////////////');
+DST(root);
